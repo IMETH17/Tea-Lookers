@@ -161,10 +161,7 @@ justify-content: space-between;
 
 /* --------------------------------------------------Responsive design */
 @media screen and (min-width:250px) and (max-width: 780px) {
-.container {
-  /* display: inline-block; */
-  /* cursor: pointer; */
-}
+
 
   .logo{
   top: 2%;
@@ -562,15 +559,6 @@ margin: 1em;
   transition: 0.3s;
 }
 
-.home-gallery_el-1{
-  /* animation: slide 10s linear infinite; */
-}
-
-.home-gallery_el-1:hover{
-  /* animation: none; */
-
-}
-
 .card:hover {
   box-shadow: 0 20px 20px 10px rgba(0, 0, 0, 0.2);
 }
@@ -772,9 +760,6 @@ tfoot > td{
    width: 95%;
  }
 
- .plantations-intro{
-
- }
 
  .plantations-container {
   display: grid;
@@ -947,12 +932,6 @@ tfoot > td{
   font-size: 86px;
   color: aliceblue;
   font-family: var(--heading-font) ;
-}
-
-.everyday-tea_btn {
-}
-
-.infusions_btn {
 }
 
 .btn_sales-face {
