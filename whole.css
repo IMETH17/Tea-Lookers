@@ -201,6 +201,21 @@ justify-content: space-between;
 
 }
 
+.nav-title:active{
+  background-color: rgb(129, 187, 187);
+  transition: 0.3s;
+}
+
+.navbar > li :hover {
+  background-color: rgb(31, 88, 88);
+}
+
+.navbar > li :active {
+  background-color: rgb(129, 187, 187);
+  transition: 0.3s;
+
+}
+
  .burger-menu{
    display: grid;
    grid-template-rows: auto auto;
@@ -327,8 +342,7 @@ justify-content: space-between;
 
 /* -------------------footer----------------------------------------------- */
 .footer-block {
-  margin-top: 2rem;
-  height: 100px;
+  height: 300px;
   background-color: rgb(49, 141, 109);
   min-height:150px;
   /* background-color:#000000; */
@@ -375,10 +389,32 @@ footer{
 }
 
 /* ------------------------------------Responsive design--------------------------------------------------------------------------- */
-@media screen and (min-width:350px) and (max-width: 936px) {
- .footer-block{
-  padding-bottom: 4rem;
- }
+@media screen and (min-width:420px) and (max-width: 936px) {
+  .footer-block{
+    height: 380px;
+  }
+.footer-nav{
+ display:grid;
+ grid-auto-flow: row;
+}
+.divider-footer{
+  display: none;
+}
+
+}
+
+@media screen and (min-width:250px) and (max-width: 420px) {
+  .footer-block{
+    height: 450px;
+  }
+.footer-nav{
+ display:grid;
+ grid-auto-flow: row;
+ 
+}
+.divider-footer{
+  display: none;
+}
 
 }
 
@@ -556,7 +592,8 @@ margin: 1em;
 .card {
   border-radius: 1rem;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  transition: 0.3s;
+  /* transition: 0.3s;
+  animation: infinite slide 5s; */
 }
 
 .card:hover {
@@ -918,7 +955,7 @@ tfoot > td{
 /* --------------------------intro-------------------------------------------*/
 .sales-face {
   background-image: url(images/background-images/tea\ type\ background.jpg);
-  padding: 13%;
+  padding: 35% 0 35% 0;
 }
 
 .sales-face > section {
@@ -953,6 +990,34 @@ tfoot > td{
   border: 2px solid rgb(190, 149, 122) ;
   opacity: 0.9;
 }
+
+/* ----------------------------Responsive design--------------------------------------------------------------- */
+
+@media screen and (min-width:495px) and (max-width:750px) {
+  .btn_sales-face {
+    width: 400px;
+  }
+}
+
+@media screen and (min-width:260px) and (max-width:495px) {
+  .btn_sales-face {
+    width: 200px;
+  }
+
+  .sales-face{
+    padding :35% 0 45% 0;
+  }
+  
+  .footer-block{
+    height: 450px;
+  }
+
+
+
+}
+
+
+
 
 /* ------------------------------sales page--------------------------------------- */
 
