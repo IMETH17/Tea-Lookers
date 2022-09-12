@@ -421,7 +421,7 @@ footer{
 
 /* ------------------------1.Home intro--------------------- */
 .home-intro {
-  background-image: linear-gradient(to bottom, rgba(61, 61, 150, 0.5) ,rgba(128, 175, 236, 0.5)), url(/images/background-images/tea\ harvest\ asia\ sri\ lanka\ 1920x1080\ wallpaper_www.miscellaneoushi.com_62\ \(1\).jpg);
+  background-image: linear-gradient(to bottom, rgba(61, 61, 150, 0.5) ,rgba(128, 175, 236, 0.5)), url(images/background-images/tea\ harvest\ asia\ sri\ lanka\ 1920x1080\ wallpaper_www.miscellaneoushi.com_62\ \(1\).jpg);
   padding: 15%;
   background-repeat: no-repeat;
   color: rgb(252, 245, 245);
@@ -649,7 +649,7 @@ margin: 1em;
 
 
 .plantations-intro {
-  background-image: url(/images/background-images/large-screen-size---1920-x-1080--1--2.jpg);
+  background-image: url(images/background-images/large-screen-size---1920-x-1080--1--2.jpg);
   padding: 12%;
   background-repeat: no-repeat;
   color: white;
@@ -882,7 +882,7 @@ tfoot > td{
 
 
 .museum-intro{
-  background-image:linear-gradient(to bottom, rgba(61, 61, 150, 0.5) ,rgba(128, 175, 236, 0.5)), url(/images/background-images/001.jpg);
+  background-image:linear-gradient(to bottom, rgba(61, 61, 150, 0.5) ,rgba(128, 175, 236, 0.5)), url(/mages/background-images/001.jpg);
   padding: 15%;
   background-repeat: no-repeat;
   color: white;
@@ -952,7 +952,7 @@ tfoot > td{
 /* ------------------------------sales face page--------------------------------------- */
 /* --------------------------intro-------------------------------------------*/
 .sales-face {
-  background-image: url(/images/background-images/tea\ type\ background.jpg);
+  background-image: url(images/background-images/tea\ type\ background.jpg);
   padding: 35% 0 35% 0;
 }
 
@@ -1020,7 +1020,7 @@ tfoot > td{
 /* ------------------------------sales page--------------------------------------- */
 
 .banner {
-  background-image: url(/images/background-images/1000_F_350807464_paCHiBvyeKtA5cosCFa8qRsbqmE6Aeyq.jpg);
+  background-image: url(images/background-images/1000_F_350807464_paCHiBvyeKtA5cosCFa8qRsbqmE6Aeyq.jpg);
   background-repeat: no-repeat;
   /* width: 900px;
   height: 320px; */
@@ -1156,7 +1156,7 @@ opacity: 0.5;
 /* -----------------------------tea sales - everday tea ----------------------------------- */
 
 .banner_2 {
-  background-image: url(/images/background-images/blac\ tea.webp);
+  background-image: url(images/background-images/blac\ tea.webp);
   background-repeat: no-repeat;
   font-family:  var(--heading-font);
   /* width: 900px;
@@ -1312,7 +1312,7 @@ grid-area: 1/2/2/2;
 /* -------------------------------------------------Allied products--------------------------------------- */
 /* ----------intro--------------------------------------------------------------- */
 .allied-intro{
-  background-image: url(/images//by-products-tea/alliedproducts.banner.webp);
+  background-image: url(images//by-products-tea/alliedproducts.banner.webp);
   padding: 16%;
   background-repeat: no-repeat;
 }
@@ -1715,7 +1715,7 @@ p img {
 /* ---------------------------------------------Donations-Page--------------------------------------------------- */
 /* -------------------------------------------1.intro--------------------------------------------------- */
 .donations-intro{
-  background-image: url(/images/donations-page/banner.png);
+  background-image: url(images/donations-page/banner.png);
   background-repeat: no-repeat;
   padding:10% 0% 12% 0%;
 }
