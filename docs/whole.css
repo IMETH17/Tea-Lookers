@@ -203,7 +203,6 @@ justify-content: space-between;
 
 .nav-title:active{
   background-color: rgb(129, 187, 187);
-  transition: 0.3s;
 }
 
 .navbar > li :hover {
@@ -212,8 +211,6 @@ justify-content: space-between;
 
 .navbar > li :active {
   background-color: rgb(129, 187, 187);
-  transition: 0.3s;
-
 }
 
  .burger-menu{
@@ -268,28 +265,29 @@ justify-content: space-between;
 
 .burger-menu input:checked ~ .menu-check span:nth-last-child(2)
 {
-  animation: moveFromPosition 0.2s forwards;
+  animation: disappear 0.2s;
+  background:rgb(59, 167, 129);
 }
-@keyframes moveFromPosition{
+@keyframes disappear{
   0%{
-    transform: translateX(0px);
+    opacity: 100%;
   }
   100%{
-    transform: translate(100px);
+    opacity: 0%;
   }
 }
 
 .burger-menu input ~ .menu-check span:nth-last-child(2)
 {
-  animation: backToPosition 0.2s forwards;
+  animation: appear 0.3s;
 }
 
-@keyframes backToPosition{
+@keyframes appear{
   100%{
-    transform: translateX(0px);
+    opacity: 100%;
   }
   0%{
-    transform: translate(100px);
+    opacity: 0%;
   }
 }
 
@@ -423,7 +421,7 @@ footer{
 
 /* ------------------------1.Home intro--------------------- */
 .home-intro {
-  background-image: linear-gradient(to bottom, rgba(61, 61, 150, 0.5) ,rgba(128, 175, 236, 0.5)), url(images/background-images/tea\ harvest\ asia\ sri\ lanka\ 1920x1080\ wallpaper_www.miscellaneoushi.com_62\ \(1\).jpg);
+  background-image: linear-gradient(to bottom, rgba(61, 61, 150, 0.5) ,rgba(128, 175, 236, 0.5)), url(/images/background-images/tea\ harvest\ asia\ sri\ lanka\ 1920x1080\ wallpaper_www.miscellaneoushi.com_62\ \(1\).jpg);
   padding: 15%;
   background-repeat: no-repeat;
   color: rgb(252, 245, 245);
@@ -651,7 +649,7 @@ margin: 1em;
 
 
 .plantations-intro {
-  background-image: url(images/background-images/large-screen-size---1920-x-1080--1--2.jpg);
+  background-image: url(/images/background-images/large-screen-size---1920-x-1080--1--2.jpg);
   padding: 12%;
   background-repeat: no-repeat;
   color: white;
@@ -884,7 +882,7 @@ tfoot > td{
 
 
 .museum-intro{
-  background-image:linear-gradient(to bottom, rgba(61, 61, 150, 0.5) ,rgba(128, 175, 236, 0.5)), url(images/background-images/001.jpg);
+  background-image:linear-gradient(to bottom, rgba(61, 61, 150, 0.5) ,rgba(128, 175, 236, 0.5)), url(/images/background-images/001.jpg);
   padding: 15%;
   background-repeat: no-repeat;
   color: white;
@@ -954,7 +952,7 @@ tfoot > td{
 /* ------------------------------sales face page--------------------------------------- */
 /* --------------------------intro-------------------------------------------*/
 .sales-face {
-  background-image: url(images/background-images/tea\ type\ background.jpg);
+  background-image: url(/images/background-images/tea\ type\ background.jpg);
   padding: 35% 0 35% 0;
 }
 
@@ -1022,7 +1020,7 @@ tfoot > td{
 /* ------------------------------sales page--------------------------------------- */
 
 .banner {
-  background-image: url(images/background-images/1000_F_350807464_paCHiBvyeKtA5cosCFa8qRsbqmE6Aeyq.jpg);
+  background-image: url(/images/background-images/1000_F_350807464_paCHiBvyeKtA5cosCFa8qRsbqmE6Aeyq.jpg);
   background-repeat: no-repeat;
   /* width: 900px;
   height: 320px; */
@@ -1158,7 +1156,7 @@ opacity: 0.5;
 /* -----------------------------tea sales - everday tea ----------------------------------- */
 
 .banner_2 {
-  background-image: url(images/background-images/blac\ tea.webp);
+  background-image: url(/images/background-images/blac\ tea.webp);
   background-repeat: no-repeat;
   font-family:  var(--heading-font);
   /* width: 900px;
@@ -1314,8 +1312,25 @@ grid-area: 1/2/2/2;
 /* -------------------------------------------------Allied products--------------------------------------- */
 /* ----------intro--------------------------------------------------------------- */
 .allied-intro{
-  background-image: url(images//by-products-tea/alliedproducts.banner.webp);
+  background-image: url(/images//by-products-tea/alliedproducts.banner.webp);
   padding: 16%;
+  background-repeat: no-repeat;
+}
+
+#mask_section{
+  width :80%;
+  background-color: #539c51;
+  padding: 10px;
+  
+}
+
+
+.tea-masks{
+  display: grid;
+  grid-template-columns: 450px 1fr;
+  grid-template-rows: 0.6fr 0.3fr 0.3fr 50px; 
+  justify-content: center;
+  align-content: center;
 }
 
 .allied-intro_h1{
@@ -1326,6 +1341,28 @@ grid-area: 1/2/2/2;
 
 .facemask-ceylon_img{
   border-radius: 1.5rem;
+  width: 400px;
+  margin-left: 10%;
+}
+
+#tea-mask_img{
+  grid-area: 1/1/4/2;
+}
+
+
+#allied-products_ol{
+  margin: 2% 10% 0% 0%;
+}
+
+.tea-masks ol {
+  margin-left: 10%;
+}
+
+.allied-_btn-visit{
+  width: 90px;
+  height:30px;
+  margin-top: 1rem;
+  border-radius: 5px;
 }
 
 .tea-beauty-products > h1{
@@ -1336,6 +1373,7 @@ grid-area: 1/2/2/2;
 
 .vector-arts{
   display: flex;
+  justify-content: space-around;
 
 }
 
@@ -1355,15 +1393,9 @@ grid-area: 1/2/2/2;
 .beauty-gallery{
   display: flex;
   gap: 1rem;
+  justify-content: space-around;
 }
 .tea-beauty_facewash-img{
-  width: 450px;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  border-radius: 1.5rem;
-}
-
-.tea-beauty_facewash-img-2{
   width: 450px;
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -1376,8 +1408,8 @@ grid-area: 1/2/2/2;
   border-radius: 2rem;
   background-image: linear-gradient(rgb(108, 216, 98), rgb(245, 242, 233));
   opacity: 0.9;
-  padding: 1%;
-
+  padding: 5px;
+  min-width: 350px;
 }
 .product-beautyCare>h2{
   text-align: center;
@@ -1389,6 +1421,7 @@ grid-area: 1/2/2/2;
    display: grid;
    justify-content: center;
    gap: 10px;
+   margin: 10px;
  }
 
 .modal {
@@ -1402,6 +1435,12 @@ grid-area: 1/2/2/2;
   text-align: left;
   background: rgba(0,0,0, .9);
   transition: opacity .25s ease;
+
+}
+.allied-products-buy_btn{
+  width: 80px;
+  height: 30px;
+  margin-left: 35%;
 }
 
 .modal__bg {
@@ -1440,6 +1479,15 @@ grid-area: 1/2/2/2;
   border-radius: 5px;
   padding: 1em 2em;
   height: 50%;
+  display: grid;
+  grid-auto-flow: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.allied-products_img{
+height: 300px;
+margin-left: 10%;
 }
 
 .modal__close {
@@ -1473,7 +1521,7 @@ grid-area: 1/2/2/2;
 .modal__close:before {
   transform: rotate(-45deg);
 }
-
+/* ------------------------------------responsive design-------------------------------------------------------------------------- */
 @media screen and (max-width: 768px) {
 	
   .modal__inner {
@@ -1481,6 +1529,117 @@ grid-area: 1/2/2/2;
     height: 90%;
     box-sizing: border-box;
   }
+}
+
+@media  screen and (min-width:950px) and (max-width:1300px) {
+  .tea-masks{
+  display: grid;
+  grid-template-columns: 450px 1fr;
+  grid-template-rows: 0.6fr 0.3fr; 
+  justify-content: center;
+  align-content: center;
+}
+}
+
+@media  screen and (min-width:916px) and (max-width:950px) {
+   .tea-masks{
+  display: grid;
+  grid-template-columns: 450px 1fr;
+  grid-template-rows: 0.6fr 0.3fr; 
+  justify-content: center;
+  align-content: center;
+}
+  #allied-products_ol{
+  grid-area: 2/1/3/2;
+ }
+
+ #visit-mask_btn{
+  grid-row: 2/3;
+ }
+}
+
+@media  screen and (min-width:500px) and (max-width:916px) {
+   #tea-masks{
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  align-items: center;
+}
+#tea-mask_img{
+  grid-area: 1/1/2/2;
+
+}
+.facemask-ceylon_img{
+    margin-left: 0;
+  }
+}
+@media  screen and (min-width:295px) and (max-width:500px) {
+#mask_section{
+  width: 99%;
+}
+
+   #tea-masks{
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  align-items: center;
+}
+#tea-mask_img{
+  grid-area: 1/1/2/2;
+
+}
+.facemask-ceylon_img{
+    margin-left: 0;
+    width: 350px;
+  }
+}
+
+@media  screen and (min-width:600px) and (max-width:1526px) {
+ .tea-beauty_facewash-img{
+  width: 350px;
+ }
+ .vector{
+  width: 250px;
+ }
+}
+
+@media  screen and (min-width:300px) and (max-width:1252px) {
+ .tea-beauty_facewash-img{
+  width: 350px;
+ }
+ .vector{
+  width: 200px;
+ }
+}
+
+@media  screen and (min-width:300px) and (max-width:775px) {
+ .beauty-gallery{
+  display: grid;
+ }
+}
+@media  screen and (min-width:300px) and (max-width:630px) {
+  .tea-beauty-products{
+    width: 90%;
+  }
+
+ .vector{
+  width:150px;
+ }
+
+ .product-beautyCare{
+  background-image:none;
+ }
+
+}
+
+@media  screen and (min-width:280px) and (max-width:475px) {
+ .vector{
+  width:120px;
+  justify-content: space-around;
+ }
+
+ .
+
 }
 
 
@@ -1492,7 +1651,7 @@ grid-area: 1/2/2/2;
   --product_btn3-color :#1a6917;
 }
 
-.btn {
+.product_btn {
   cursor: pointer;
   background: var(--product_btn-color);
   display: inline-block;
@@ -1503,8 +1662,8 @@ grid-area: 1/2/2/2;
   text-align: center;
 }
 
-.btn:hover,
-.btn:focus {
+.product_btn:hover,
+.product_btn:focus {
   background: var(--product_btn-hover-color);
 }
 
@@ -1579,7 +1738,6 @@ p img {
 }
 
 .Donate-page_btn {
-
   width: 500px;
   padding: 20px;
   margin-bottom: 10px;
@@ -1603,9 +1761,6 @@ p img {
 
 
 /* -----------------------------------------------------2.merchandise------------------------------------------ */
-
-
-
 .merch-container{
   display:grid;
   grid-template-columns: repeat(3,1fr);

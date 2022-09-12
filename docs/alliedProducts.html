@@ -5,7 +5,7 @@
     <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge" /> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tea Lookers</title>
-   <link rel="stylesheet"  href="/whole.css" />
+   <link rel="stylesheet"  href="whole.css" />
   </head>
   <body>
          <header class="main-header">
@@ -62,11 +62,11 @@
       <h1 class="allied-intro_h1">True Ceylon.</h1>
     </div>
       
-    <section>
+    <section id="mask_section">
       <h1 class="face-mask_h1">Ceylon Tea Dyed Branded Face Mask  Dye is a By-Product of Ice Tea Manufacturing
       </h1>
-      <div class="tea-masks">
-        <div>
+      <div class="tea-masks" id="tea-masks">
+        <div id="tea-mask_img">
           <img src="/images/by-products-tea/facemask1.jpg" alt="" class="facemask-ceylon_img">
         </div>
         <div>
@@ -74,7 +74,7 @@
             Having the objective of increasing the awareness level on Ceylon Tea as a global brand, Sri Lanka Tea Board has started distributing Ceylon Tea branded face mask among the business community worldwide on complimentary basis. With the collaboration of the Ministry of Foreign Relations, arrangements have been made by Sri Lanka Tea Board to dispatch Ceylon Tea Branded face masks to over seventy five (75) Sri Lankan missions around the world. The specialty of Ceylon Tea branded face mask is that it has been dyed with the use of Ceylon Tea Dye which is a by-product of Ice Tea manufacturing. 
           </p>
         </div>
-     <div>
+     <div id="allied-products_ol">
         <ol>
           <li>Re-usability over thirty (30) times washes</li>
           <li>Natural antimicrobial (AATCC 100)</li>
@@ -82,8 +82,8 @@
           <li>Eco-friendliness and non-toxicity</li>
         </ol>
      </div>
-     <div>
-      <a href=""><button>Visit Page</button>
+     <div id="visit-mask_btn">
+      <a href=""><button class="allied-_btn-visit">Visit Page</button>
       </a>
     </div>
 
@@ -101,11 +101,11 @@
             ready to face their daily challenges.</p>
             <div class="beauty-gallery">
               <div>
-                <img src="/images/by-products-tea/face washing.webp" alt="" class="tea-beauty_facewash-img">
+                <img src="/images/by-products-tea/face washing.webp" alt="" class="tea-beauty_facewash-img" id="tea-beauty_facewash-img-1">
               </div>
               <div>
                 <img src="/images/by-products-tea/skin care.webp" alt=""
-                class="tea-beauty_facewash-img-2">
+                class="tea-beauty_facewash-img" id="tea-beauty_facewash-img-2">
               </div>
             </div>           
                     <div class="vector-arts">
@@ -128,9 +128,9 @@
              <div>
               <p>
              <div class="display-beautyProducts">
-               <label class="btn" for="modal-1">Ceylon Green Tea Perfume Body Lotion</label>
-               <label class="btn btn--2" for="modal-2">Tea Inspired Cleansing Facial Wipes</label>
-                <label class="btn btn--3" for="modal-3">Tea Inspired Soap</label>
+               <label class="product_btn" for="modal-1">Ceylon Green Tea Perfume Body Lotion</label>
+               <label class="product_btn btn--2" for="modal-2">Tea Inspired Cleansing Facial Wipes</label>
+                <label class="product_btn btn--3" for="modal-3">Tea Inspired Soap</label>
              </div>
           
            </p>
@@ -143,9 +143,19 @@
             <div class="modal__inner">
               <label class="modal__close" for="modal-1"></label>
               <h2>Ceylon Green Tea Perfume Body Lotion</h2>
-                        <p><img src="/images/by-products-tea/perfume_lotion.jpg" alt="" />
-                          <button>Buy</button>
-                        </p>
+              <div>
+
+                <img src="/images/by-products-tea/perfume_lotion.jpg" class="allied-products_img" alt="" />
+              </div>
+              <div>
+
+                <p>
+                </p>
+              </div>
+              <div>
+
+                <button class="allied-products-buy_btn">Buy</button>
+              </div>
             </div>
           </div>
 
@@ -155,8 +165,18 @@
             <div class="modal__inner">
               <label class="modal__close" for="modal-2"></label>
              <h2>Tea Tree Daily Cleansing Facial Wipes</h2>
-             <p><img src="/images/by-products-tea/facial wipes.jpg" alt="" /></p>
-           </div>
+            <div>
+
+              <img src="/images/by-products-tea/facial wipes.jpg" class="allied-products_img" alt="" />
+            </div>
+            <div>
+
+              <p>
+              </div>
+              <div>
+                <button class="allied-products-buy_btn">Buy</button></p>
+              </div>
+            </div>
 
 </div>
 <input class="modal-state" id="modal-3" type="checkbox" />
@@ -165,8 +185,18 @@
   <div class="modal__inner">
     <label class="modal__close" for="modal-3"></label>
     <h2>Tea Inspired Soap</h2>
-    <p><img src="/images/by-products-tea/sooap.jpeg" alt="" /></p>
-  </div>
+    <div>
+
+      <img src="/images/by-products-tea/sooap.jpeg" class="allied-products_img" alt="" />
+    </div>
+    <div>
+
+      <p>
+      </div>
+      <div>
+        <button class="allied-products-buy_btn">Buy</button></p>
+      </div>
+    </div>
 </div>
                  
         </section>
