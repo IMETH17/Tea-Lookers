@@ -515,6 +515,7 @@ footer{
   padding-top: 30px;
   grid-template-columns: 0.6fr 1fr auto;
   gap:5px;
+  margin-bottom: 1rem;
 }
 
 .tea-sales-exp_p {
@@ -576,7 +577,7 @@ opacity: 0.5;
   font-family: var(--heading-font);
   font-size: 24px;
   width: 400px;
-  height: 30px;
+  height: 50px;
   border-radius: 6px;
   background-color: #91e0ab;
   border: 2px solid rgb(240, 240, 240);
