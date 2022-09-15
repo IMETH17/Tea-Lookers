@@ -439,7 +439,7 @@ footer{
 /* intro---------------------------------------------------------------------------*/
 .sales-face {
   background-image: url(images/background-images/tea\ type\ background.jpg);
-  padding: 25% 0 20% 0;
+  padding: 25% 0 45% 0;
   background-repeat: no-repeat;
 }
 
@@ -481,6 +481,12 @@ footer{
 @media screen and (min-width:495px) and (max-width:750px) {
   .btn_sales-face {
     width: 400px;
+  }
+}
+
+@media screen and (min-width:1120px){
+  .sales-face{
+    padding: 25% 0 20% 0;
   }
 }
 
