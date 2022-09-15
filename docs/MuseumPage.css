@@ -49,7 +49,7 @@
 .museum-history_container {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
-  grid-template-rows: repeat(3,auto);
+  grid-template-rows: repeat(4,auto);
   justify-items: center;
   gap: 25px;
 }
@@ -83,7 +83,19 @@
   gap :10px;
   grid-area: 3/2/4/8;
   padding: 20px;
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
+}
+
+#museum_map-img{
+  width: 100%;
+  height: 200px;
+  border-radius: 2rem;
+}
+
+#museum-map{
+  grid-area: 4/2/5/8;
+  width: 90%;
+  margin-bottom: 2rem;
 }
 
 /* Responsive design-------------------------------------------------------------- */
