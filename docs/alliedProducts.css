@@ -5,6 +5,10 @@
     padding: 16%;
     background-repeat: no-repeat;
   }
+
+  .allied-intro section {
+  width: 100%;
+  }
   
   #mask_section{
     width :80%;
