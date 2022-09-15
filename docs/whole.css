@@ -57,7 +57,6 @@ p{
 :root{
   /* Heading font */
   --heading-font : 'lobsterregular';
-
 }
 
 /* =============================================================================== */
@@ -454,6 +453,8 @@ footer{
   font-size: 86px;
   color: aliceblue;
   font-family: var(--heading-font) ;
+  text-shadow: 8px 8px 10px #000000;
+
 }
 
 .btn_sales-face {
@@ -466,7 +467,9 @@ footer{
   color: rgb(255, 255, 255);
   font-optical-sizing: 1;
   opacity: 0.88;
-    font-family: var(--heading-font);
+  font-family: var(--heading-font);
+  text-shadow: 8px 8px 10px #3d3b3b;
+
 
 }
 

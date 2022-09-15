@@ -2,10 +2,13 @@
 /* Plantations intro -------------------------------------------------------------- */
 #plantations-intro_h1{
   font-family:  var(--heading-font);
+  text-shadow: 8px 8px 10px #000000;
+
 }
 
 .plantations-intro_section{
   width: 80%;
+  text-align: center;
 }
 
 .plantations-tea-grades_h1{

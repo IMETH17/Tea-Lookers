@@ -4,10 +4,12 @@
 #museum_h1{
   margin-top: 1rem;
   font-family: var(--heading-font);
+
 }
 
 #museum-intro_h1{
   font-family: var(--heading-font);
+  text-shadow: 8px 8px 10px #000000;
 }
 
 
@@ -20,6 +22,10 @@
 
 .museum-intro section{
   width: 80%;
+}
+
+.museum-intro p{
+  text-align: center;
 }
 
 /*2. the  Museum  ----------------------------------------------------------------- */

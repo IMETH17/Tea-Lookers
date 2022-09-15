@@ -11,8 +11,9 @@
   font-family: var(--heading-font);
   font-size: 60px;
   margin-top: 0rem;
-  backdrop-filter: blur(45px);
+  /* backdrop-filter: blur(45px); */
   color: rgb(255, 255, 255);
+  text-shadow: 8px 8px 10px #000000;
 }
 
 .donations-intro > section {
