@@ -1,8 +1,9 @@
 
 .banner_2 {
-    background-image: url(/docs/images/background-images/blac\ tea.webp);
+    background-image: url(images/background-images/blac\ tea.webp);
     background-repeat: no-repeat;
     font-family:  var(--heading-font);
+    text-shadow: 8px 8px 10px #000000; 
     /* width: 900px;
     height: 320px; */
     padding: 10%;

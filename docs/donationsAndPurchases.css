@@ -1,7 +1,7 @@
 /* Donations-Page-----------------------------------------------------------------*/
 /* 1.intro--------------------------------------------------- */
 .donations-intro{
-  background-image: url(/docs/images/donations-page/banner.png);
+  background-image: url(images/donations-page/banner.png);
   background-repeat: no-repeat;
   padding:10% 0% 12% 0%;
 }

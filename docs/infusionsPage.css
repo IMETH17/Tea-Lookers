@@ -1,5 +1,5 @@
 .banner {
-    background-image: url(/docs/images/banner-images/banner.jpg);
+    background-image: url(images/banner-images/banner.jpg);
     background-repeat: no-repeat;
     /* width: 900px;
     height: 320px; */
@@ -7,6 +7,7 @@
     border-radius: 2rem;
     color: rgb(59, 58, 58);
     font-family:  var(--heading-font);
+    text-shadow: 8px 8px 10px #000000; 
     width: 80%;
   
   }
