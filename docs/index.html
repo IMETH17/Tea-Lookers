@@ -2,13 +2,34 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge" /> -->
+    <!-- ===========================Favicon======================================= -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <!-- ======================================================================== -->
     <title>Tea Lookers</title>
     <link rel="stylesheet"  href="whole.css" />
+    <link rel="stylesheet" href="index.css">
   </head>
   <body id="plantations-body">
-         <header class="main-header">
+
+    <!-- =======================================HEADER============================================ -->
+    <header class="main-header">
       <div class="container-header">
           <a href="index.html" id="logo-nav"
           ><img
@@ -16,7 +37,7 @@
           alt="logo of the website"
           class="logo"
           /></a>
-        </div>
+      </div>
         
         <div>
           <nav>
@@ -53,13 +74,10 @@
           </div>
           </div>       
           </nav>
-      </div>
+        </div>
     </header>
-    
+    <!-- =======================================SECTION============================================ -->
     <div class="home-intro">
-      <!-- <video autoplay muted loop class="home-video">
-    <source src="video/videoplayback_3" type="video/mp4"> -->
-<!-- </video> -->
     <section >
       <h1 id="home-intro_h1">The Sri Lankan Art Of Tea</h1>
       <p class="text-visibility">
@@ -80,18 +98,18 @@
         market and ISO 3720 is the minimum standard applies for the products.
         The country has the capability to produce the cleanest tea in the world
         in terms of minimum pesticide residues
-      </p>
-      
+      </p>     
     </section>
     </div>
+    <!-- =======================================SECTION============================================ -->
     <section class="home-history">
       <h1 id="home-history_h1">History</h1>
       <div class="home-history_container">
         <div class="home-history_map">
           <img
-            src="images/home-page/tea-growing-regions-of-sri-lanka.jpg"
+            src="images/home-page/region-growmap-webp.webp"
             alt=""
-            height="350px"
+            height="400px"
             class="home-history_map-img"
           />
         </div>
@@ -145,9 +163,17 @@
         </div>
       </div>
     </section>
+     <!-- =======================================SECTION============================================ -->
     <section class="home-gallery">
       <h1 id="home-gallery_h1">Gallery</h1>
       <div class="home-gallery_scroller snaps">
+        <div class="home-gallery_el-1 card">
+          <h4>Tea Farmer</h4>
+          <img src="images/home-page/tea-farmer.webp" alt="farmer" class="gallery-image" />
+          <p>
+            Employed workers carefully pick the best tea leaves that can be used to process the finest and richest flavors day and night.
+          </p>
+        </div>
         <div class="home-gallery_el-1 card">
           <h4 >The Museum</h4>
           <img
@@ -156,11 +182,10 @@
             class="gallery-image"
           />
           <p>
-            Learn about the Sri Lankan tea history and why Sri Lanka is the
-            finest in the world
+            Learn about the Sri Lankan tea history and why Sri Lanka offers the
+            finest tea in the world by visitng the Ceylon Tea Museum.
           </p>
         </div>
-
         <div class="home-gallery_el-1 card ">
           <h4>Tea Farming</h4>
           <img
@@ -174,12 +199,8 @@
           </p>
         </div>
         <div class="home-gallery_el-1 card">
-          <h4>Tea Farmer</h4>
-          <img src="images/home-page/TEa (1).jpg" alt="farmer" class="gallery-image" />
-        </div>
-        <div class="home-gallery_el-1 card">
-          <h4>lorem ipsul</h4>
-          <img src="images/home-page/tea-farmers.jpg" alt="" class="gallery-image" />
+          <h4>Sri Lankan Tea at International Events</h4>
+          <img src="images/home-page/events.jpg" alt="" class="gallery-image" />
           <p>
             Sri Lanka Participates at Annual Tea Festival at Royal Botanical
             Gardens, Burlington, Ontario
@@ -187,7 +208,7 @@
         </div>
         <div class="home-gallery_el-1 card">
           <h4>Experience Tea Farming</h4>
-          <img src="images/home-page/drinking tea.webp" alt="tea farming" class="gallery-image" />
+          <img src="images/home-page/activity.jpg" alt="tea farming" class="gallery-image" />
           <p>
             As a volunteer of you will gain hands-on experience helping the tea
             farmers and local communities to cultivate and harvest organic tea
@@ -197,7 +218,7 @@
         </div>
         <div class="home-gallery_el-1 card">
           <h4>Factory Tours</h4>
-          <img src="images/home-page/activity.jpg" alt="tea processing" class="gallery-image" />
+          <img src="images/home-page/factory-tour.jpg" alt="tea processing" class="gallery-image" />
           <p>
             Learn about the local processing of tea leaves. First hand
             experience on the tea factory machinery and operations. A tour
@@ -228,15 +249,19 @@
             </span>
             <p><span class="highlight"> <br> Tea Lookers Copyright &copy; 2022</p>  
       </div>
-      <!-- ---------------------------- Intro text------------------------ -->
-      <!-- Srilankabusiness.com. (2022) Ceylon Tea Industry Capability in Sri Lanka -
+       <!-- =======================================REFERENCES============================================ -->
+       
+        <!-- Srilankabusiness.com. (2022) Ceylon Tea Industry Capability in Sri Lanka -
         EDB Sri Lanka. [online] Available at:
         <https://www.srilankabusiness.com/tea/about-tea/industry-capability.html>
         [Accessed 8 August 2022] -->
+
         <!-- OEC - The Observatory of Economic Complexity (2022) Tea in Sri Lanka
         [Online] Available from:
         https://oec.world/en/profile/bilateral-product/tea/reporter/lka 
         [Accessed: 20th July 2022]. -->
+
+        <!-- Consulate General of Sri Lanka (2022) Sri Lanka Participates at Annual Tea Festival at Royal Botanical Gardens, Burlington, Ontario – Ministry of Foreign Affairs – Sri Lanka. [online] Available at: https://mfa.gov.lk/sri-lanka-participates-at-annual-tea-festival-at-royal-botanical-gardens-burlington-ontario/ [Accessed 14 Sep. 2022]. -->
 
 
 

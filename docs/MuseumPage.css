@@ -1,0 +1,156 @@
+/* =============================================================================== */
+/* Museum  Page------------------------------------------------------------------ */
+/* 1.museum intro------------------------------ */
+#museum_h1{
+  margin-top: 1rem;
+  font-family: var(--heading-font);
+}
+
+#museum-intro_h1{
+  font-family: var(--heading-font);
+}
+
+
+.museum-intro{
+  background-image:linear-gradient(to bottom, rgba(61, 61, 150, 0.5) ,rgba(128, 175, 236, 0.5)), url(images/background-images/001.jpg);
+  padding: 15%;
+  background-repeat: no-repeat;
+  color: white;
+}
+
+.museum-intro section{
+  width: 80%;
+}
+
+/*2. the  Museum  ----------------------------------------------------------------- */
+.museum-history > h1{
+  font-family: var(--heading-font);
+
+}
+
+.museum-intro_container {
+  border-radius: 3rem;
+  display: grid;
+  grid-auto-flow: column;
+  overflow-x: hidden;
+  padding-left: 20px;
+  padding-right: 20px;
+  gap: 25px;
+  padding: 2rem;
+  justify-content: baseline;
+  overflow-x: scroll;
+}
+
+.m_gallery-image {
+  height: 200px;
+  border-radius: 1rem;
+}
+/* 3. A bit of history------------------------------------------------------------ */
+.museum-history_container {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(3,auto);
+  justify-items: center;
+  gap: 25px;
+}
+
+.museum-history-c1 {
+  grid-area: 1/1/2/9;
+}
+
+.museum-history-c2 {
+  width: 700px;
+  display: flex;
+  gap: 10px;
+  grid-area: 2/2/3/8;
+  padding: 20px;
+  justify-items: center;
+}
+.hide_person{
+  display: none;
+}
+.important-figure_img{
+  height: 200px;
+  border-radius: 5rem;
+}
+
+#important-figure_img1{
+  border-radius: 2rem;
+}
+
+.museum-history-c3 {
+  display: flex;
+  gap :10px;
+  grid-area: 3/2/4/8;
+  padding: 20px;
+  margin-bottom: 3rem;
+}
+
+/* Responsive design-------------------------------------------------------------- */
+@media screen and (min-width:680px) and (max-width: 1250px) {
+  .museum-history-c2{
+    display: grid;
+    width: 250px;
+    grid-area: 2/1/3/5;
+  }
+  #important-figure_img1{
+    width: 219px;
+    height: 100%;
+  }
+  .museum-history-c3{
+    display: grid;
+    grid-area: 2/5/3/8;
+
+  }
+}
+
+@media screen and (min-width:680px) and (max-width: 990px) {
+  .museum-history{
+    width: 85%;
+    margin-left: 10%;
+  }
+
+}
+
+@media screen and (min-width:400px) and (max-width: 680px) {
+  .museum-history-c2{
+    justify-items: center;
+  }
+
+  .museum-history-c3{
+    justify-items: center;
+  }
+}
+
+@media screen and (min-width:230px) and (max-width: 680px) {
+
+
+  .museum-intro section{
+    width: 95%;
+  }
+  .museum-gallery_card{
+    width:90%;
+  }
+  .museum-intro_container{
+    width: 100%;
+  }
+  .museum-history{
+    width: 85%;
+    margin-left: 10%;
+  }
+   .museum-history-c2{
+    display: grid;
+    grid-area: 2/1/3/9;
+    width: 100%;
+  }
+  #important-figure_img1{
+    width: 219px;
+    height: 100%;
+  }
+  .museum-history-c3{
+    display: grid;
+    grid-area: 3/1/4/9;
+
+  }
+
+}

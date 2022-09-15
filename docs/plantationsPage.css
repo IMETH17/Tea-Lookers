@@ -1,0 +1,214 @@
+/* Plantation Sites Page---------------------------------------------------------- */
+/* Plantations intro -------------------------------------------------------------- */
+#plantations-intro_h1{
+  font-family:  var(--heading-font);
+}
+
+.plantations-intro_section{
+  width: 80%;
+}
+
+.plantations-tea-grades_h1{
+  font-family:  var(--heading-font);
+  margin-bottom: 1rem;
+}
+
+.tea-grades{
+  width: 80%;
+}
+
+/*2. plantation sites ------------------------------------------------------------- */
+
+
+.plantations-intro {
+  background-image: url(images/background-images/large-screen-size---1920-x-1080--1--2.jpg);
+  padding: 12%;
+  background-repeat: no-repeat;
+  color: white;
+}
+
+.plantations-container {
+  display: grid;
+  grid-template-columns:  1fr ;
+  grid-row: repeat(5, 1fr);
+  gap: 1rem;
+  margin: auto auto;
+  justify-content: center;
+ 
+}
+
+.plantation-site_img{
+  height: 300px;
+  border-radius: 1rem;
+
+}
+
+.plantation-paras{
+  width: 410px;
+  margin: 3rem 0rem 0.5rem 1rem;
+  grid-column:2/3 ;
+  padding: 5px 10px 5px 10px;
+}
+
+.site-items {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  /* gap: 10px; */
+  margin-top: 3rem;
+    background-image: linear-gradient(to bottom, rgba(61, 150, 91, 0.5) ,rgba(106, 243, 170, 0.5)) ;
+    border-radius: 1rem;
+    padding: 1rem;
+}
+.plantation-map {
+  height: 200px;
+  border-radius: 1rem;
+  margin-top:2rem ;
+}
+.plantations-site_h4 {
+  font-size: 30px;
+  width: 300px;
+}
+
+.plantations-site_h4{
+  font-family: var(--heading-font);
+}
+
+.plantation-break{
+ border: 2px solid black;
+  width: 70%;
+  margin: auto;
+  margin-top: 1rem;
+  margin-bottom: 5rem;
+  text-align: center;
+}
+
+/*3. plantation sites table-------------------------------------------------------- */
+.tea-grade_table-img {
+  width: 200px;
+}
+tfoot + td{
+  margin-left: 10%;
+}
+.tea-grade-row{
+  border-radius: 1rem;
+}
+
+.tea-grade-row:hover{
+  box-shadow: 0 20px 20px 10px rgba(0, 0, 0, 0.2);
+
+}
+
+/* Responsive design-------------------------------------------------------------- */
+
+@media screen and (min-width:890px) and (max-width: 1200px) {
+ .site-items {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* gap: 10px; */
+  margin-top: 3rem;
+    background-image: linear-gradient(to bottom, rgba(61, 150, 91, 0.5) ,rgba(106, 243, 170, 0.5)) ;
+    border-radius: 1rem;
+    padding: 1rem;
+}
+.plantation-map {
+  height: 200px;
+  border-radius: 1rem;
+  margin-top:2rem ;
+}
+
+}
+
+@media screen and (min-width:484px) and (max-width: 890px) {
+ .site-items {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 310px 1fr 1fr;
+    /* gap: 10px; */
+    margin-top: 3rem;
+    background-image: linear-gradient(to bottom, rgba(61, 150, 91, 0.5) ,rgba(106, 243, 170, 0.5)) ;
+    border-radius: 1rem;
+    padding: 1rem;
+    justify-items: center;
+    align-items: center;
+}
+
+.plantation-map {
+  height: 200px;
+  border-radius: 1rem;
+  margin-top:2rem ;
+}
+
+}
+@media screen and (min-width:290px) and (max-width: 484px) {
+ .plantations-intro_section{
+   width: 95%;
+ }
+
+
+ .plantations-container {
+  display: grid;
+  grid-template-columns:  1fr ;
+  grid-row: repeat(5, 1fr);
+  gap: 1rem;
+  margin: auto auto;
+  justify-content: center;
+ }
+
+  .site-items {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 310px 1fr 1fr;
+  margin-top: 3rem;
+  background-image: linear-gradient(to bottom, rgba(61, 150, 91, 0.5) ,
+  rgba(106,243, 170, 0.5)) ;
+  border-radius: 1rem;
+  padding: 6px;
+  justify-items: center;
+  align-items: center;
+}
+.plantation-paras{
+  width: 100%;
+  margin:1px;
+  padding: 5px 10px 5px 10px;
+}
+
+.plantation-site_img{
+  margin-left: 8%;
+  width: 250px;
+  height: 200px;
+  border-radius: 1rem;
+
+}
+
+.plantation-map {
+  height: 200px;
+  width: 200px;
+  
+}
+}
+
+@media screen and (min-width:290px) and (max-width: 322px) {
+ .plantations-intro{
+   padding: 3%;
+ }
+}
+
+@media screen and (min-width:290px) and (max-width:780px){
+  .tea-grade-row{
+    display: grid;
+    grid-template-columns:1fr;
+    grid-template-rows:  1fr;
+    justify-items: center;
+    gap: 10px;
+    padding: 10px 0 30px 0;
+  }
+
+  .td_heading {
+    font-weight:bold;
+    font-family: var(--heading-font);
+  }
+  
+.heading-tea-grades{
+  display: none;
+}
+}
