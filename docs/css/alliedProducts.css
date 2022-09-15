@@ -1,7 +1,7 @@
 /* -------------------------------------------------Allied products--------------------------------------- */
 /* ----------intro--------------------------------------------------------------- */
 .allied-intro{
-    background-image: url(images//by-products-tea/alliedproducts.banner.webp);
+    background-image: url(/docs/images//by-products-tea/alliedproducts.banner.webp);
     padding: 16%;
     background-repeat: no-repeat;
   }
@@ -30,7 +30,7 @@
     font-family: var(--heading-font);
     font-size: 100px;
     color: #bdb8a2;
-    text-shadow: 8px 8px 10px #000000; text-shadow: ;
+    text-shadow: 8px 8px 10px #000000; 
   }
   
   .facemask-ceylon_img{
@@ -104,7 +104,7 @@
     border-radius: 1.5rem;
   }
   
-  /* ---------tea products modal----------------------------------------- */
+  /* tea products modal---------------------------------------------- */
   .product-beautyCare{
     margin-top: 1rem;
     border-radius: 2rem;
@@ -224,7 +224,7 @@
   .modal__close:before {
     transform: rotate(-45deg);
   }
-  /* ------------------------------------responsive design-------------------------------------------------------------------------- */
+  /* responsive design------------------------------------------------- */
   @media screen and (max-width: 768px) {
       
     .modal__inner {
@@ -364,8 +364,7 @@
   }
   
   
-  /* Other
-  * =============================== */
+  /* Other============================================================ */
   :root{
     --product_btn-color :#49d483; 
     --product_btn-hover-color :#3498db;

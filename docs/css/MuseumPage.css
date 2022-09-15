@@ -14,7 +14,7 @@
 
 
 .museum-intro{
-  background-image:linear-gradient(to bottom, rgba(61, 61, 150, 0.5) ,rgba(128, 175, 236, 0.5)), url(images/background-images/001.jpg);
+  background-image:linear-gradient(to bottom, rgba(61, 61, 150, 0.5) ,rgba(128, 175, 236, 0.5)), url(/docs/images/background-images/001.jpg);
   padding: 15%;
   background-repeat: no-repeat;
   color: white;
