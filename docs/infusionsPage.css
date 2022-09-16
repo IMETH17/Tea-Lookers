@@ -27,15 +27,7 @@
   
   }
 
-  .seller-buttons{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin-top: 5px;
-    border-radius: 0.4rem;
-    padding: 2px;
-      background-image: linear-gradient(rgb(212, 181, 126), rgb(179, 145, 103));
-    opacity: 0.9;
-    border: 2px solid rgb(212, 134, 17);
-  }
+  
 
   .seller-buy_btn{
     border-radius: 3px;
@@ -50,9 +42,7 @@
    opacity: 0.5;
   }
 
-  .set-width_btn{
-    width: 80px;
-  }
+ 
 
   .seller-buttons:hover{
   opacity: 0.5;

@@ -558,10 +558,9 @@ footer{
   opacity: 0.9;
   border: 2px solid rgb(212, 134, 17);
 }
-
-.set-width_btn{
-  width: 80px;
-}
+ .set-width_btn{
+    width: 88px;
+  }
 
 .seller-buttons:hover{
 opacity: 0.5;
