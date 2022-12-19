@@ -22,7 +22,7 @@
             <h1 class="display-6">Donations</h1>
         </div>
     </div>
-    <div id="successDonation" class="successMsg position-fixed container hidden"> 
+    <div id="successDonation" class="successMsg position-fixed container hidden "> 
   <div class="row justify-content-end">
     <button class="btn-close" aria-label="Close" onclick="showSuccessDonation()"></button>
   </div>
@@ -30,6 +30,15 @@
     <p class="h4">Thank you for your Donation!</p>
     <p class="h4">You have donated &nbsp;<span id="donation-amount"></span> </p>
     <span class="display-1 bg-success tick rounded-circle justify-content-center"><i class="bi bi-check"></i></span>
+  </div>
+</div>
+    <div id="failDonation" class="failMsg position-fixed container hidden"> 
+  <div class="row justify-content-end">
+    <button class="btn-close" aria-label="Close" onclick="showFailDonation()"></button>
+  </div>
+  <div class="row">
+    <p class="h4">Please fill the form!</p>
+    <span class="display-1 bg-danger tick rounded-circle justify-content-center"><i class="bi bi-x"></i></span>
   </div>
 </div>
   <div class="row body">
@@ -116,7 +125,7 @@
       <div>
         <div id="donation_display">
         </div>
-        <button class="btn btn-primary" id="pay_btn">Button</button>
+        <button class="btn btn-primary" id="pay_btn">Confirm Pay</button>
       </div>
       </div>
       </div>

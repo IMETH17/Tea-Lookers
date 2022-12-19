@@ -58,6 +58,14 @@
 
 }
 
+#loyaltyModal{
+  width: 50vw;
+  margin: auto;
+  border-radius: 10px;
+  margin-top: 10px;
+  padding: 10px;
+}
+
 #durationSelect{
   padding: 5px;
   border: none;
@@ -105,9 +113,9 @@
 
 .display_cart{
         top: 20%;
-        left: 41.7%;
-        width: 50em;
-        height: 100vh;
+        left:37%;
+        width: auto;
+        height: auto;
         margin-top: -9em;
         margin-left: -15em;
         border: 1px solid #666;
@@ -139,3 +147,98 @@
   margin-top: 5vh; 
 
 }
+
+.place_order{
+  display: flex;
+  justify-content: space-between;
+  padding-top: 10px;
+}
+
+.favorites-div{
+  display: flex;
+  justify-content: space-between;
+}
+
+@media screen and (min-width:700px) and (max-width: 1250px) {
+.body{
+  display: flex;
+  width: 90vw;
+  margin: auto auto;
+  margin-bottom: 20px;
+}
+
+#favorites{
+  position: absolute;
+  width: 80vh;
+}
+
+.display_cart{
+        top: 20%;
+        left: 30%;
+        width: auto;
+        height: auto;
+        margin-top: -9em;
+        margin-left: -15em;
+        border: 1px solid #666;
+        background-color:rgb(208, 223, 210);
+        border-radius: 10px;
+        border: none;
+        box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+        position: fixed;
+        padding: 5px 20px 0 20px;
+        z-index: 60;
+}
+
+}
+
+@media screen and (min-width:300px) and (max-width: 700px) {
+.body{
+  display: flex;
+  width: 100vw;
+  margin: auto auto;
+  margin-bottom: 20px;
+}
+#favorites{
+  position: absolute;
+  width: 80vh;
+}
+
+.cart{
+  width: 100%;
+  background-color: rgb(208, 223, 210);
+}
+
+.display_cart{
+        width: 100%;
+        border: 1px solid #666;
+        background-color:rgb(208, 223, 210);
+        border-radius: 10px;
+        border: none;
+        box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+        padding: 5px 20px 0 20px;
+        z-index: 60;
+}
+
+.header-ticket{
+  display: grid;
+  grid-template-rows: repeat(2,1fr);
+}
+
+.display_duration{
+  display: grid;
+  grid-template-rows:auto auto ;
+  justify-content: space-between;
+}
+.div-duration{
+  display: grid;
+  grid-template-rows: auto auto;
+
+}
+
+.divs-durations{
+  display: flex;
+}
+
+}
+
+

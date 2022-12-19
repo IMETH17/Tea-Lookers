@@ -51,11 +51,14 @@ function checkMonth(month,year){
   if (year.value === ""){
     expiryHelp.innerText = "Please select valid year";
     expiryHelp.classList.add("text-danger");
+    return true
   }else if (month.value ===""){
     expiryHelp.innerText = "Please select valid month";
     expiryHelp.classList.add("text-danger");
+    return false;
   }else{
     displayHelp(false, expiryHelp);
+    return false;
   }
 }
 
@@ -65,24 +68,29 @@ function displayHelp(bool,helpTxt){
     if (bool) {
       helpTxt.innerText = "Looks good!";
       helpTxt.classList.add("text-success");
+      return true;
     } else {
       switch (helpTxt) {
         case cardNameHelp:
           cardNameHelp.innerText = "Please enter name in upper case letters";
           cardNameHelp.classList.add("text-danger");
+          return false;
           break;
         case cvvNumHelp:
           cvvNumHelp.innerText = "Enter valid cvv";
           cvvNumHelp.classList.add("text-danger");
+          return false;
           break;
         case cardNumHelp:
           cardNumHelp.innerText =
             "Please enter valid card number (Contains 16 digits)";
           cardNumHelp.classList.add("text-danger");
+          return false;
           break;
         case expiryHelp:
           expiryHelp.innerText="Looks good!"
           expiryHelp.classList.add("text-success");
+          return false;
           break;
       }
     }
@@ -136,21 +144,31 @@ cardNumber.addEventListener("keyup", ()=>{
 
 window.addEventListener("load", init)
 
+let check1,check2,check3,check4;
+
 donateForm.addEventListener("change",()=>{
   // e.preventDefault();
-  checkCardNumValid(cardNumber);
-  chechCvv(cvv)
-  checkName(cardName)
-  checkMonth(expireMM,expireYY)
+  check1 =checkCardNumValid(cardNumber);
+  check2 =chechCvv(cvv);
+  check3 =checkName(cardName);
+  check4 =checkMonth(expireMM,expireYY);
   donationHelp.innerHTML = donation === 0 ? "<p class='text-danger'>Please select donation</p>" : ""; 
 })
+
+const failDisplay = document.getElementById("failDonation");
+
+function showFailDonation(){
+  failDisplay.classList.toggle("hidden");
+}
 
 pay_btn.addEventListener("click",(e)=>{
   e.preventDefault();
   console.log(342);
-  showSuccessDonation();
-  resetForm();
-
+  if ( check1===false || check2===false || check3===false || check4===false){
+    showSuccessDonation();
+  }else{
+    showFailDonation();
+  }
 })
 
 

@@ -400,19 +400,20 @@ function checkEmail(email, help) {
 
 function confirmEmail() {
   let email1 = checkEmail(guestEmail, emailHelp) ? guestEmail.value : "";
-  console.log(email1);
+  // console.log(email1);
   let email2 = checkEmail(guestConfirmEmail, emailConfirmHelp)
     ? guestConfirmEmail.value
     : "";
-  console.log(email2);
+
+  // console.log(email2);
   if (email1 === email2 && email1 !== "" && email2 !== "") {
-    emailConfirmHelp.textContent = "looks good!";
     emailHelp.textContent = "looks good!";
     email = email1;
+    return true;
   } else {
-    emailConfirmHelp.textContent = "email mismatch error";
     emailHelp.textContent = "email mismatch error";
     email = "";
+    return false;
   }
 }
 
@@ -444,15 +445,12 @@ function checkForValid(bool, textHelp) {
 
 function checkTeleNum(tele) {
   const teleReg = /[0-9]{10}/g;
-  if (
-    checkForValid(
-      tele.value.length === 10 && teleReg.test(tele.value),
-      teleHelp
-    )
-  ) {
+  if (checkForValid(tele.value.length === 10 && teleReg.test(tele.value),teleHelp)) {
     phoneNum += tele.value;
+    return true;
   } else {
     phoneNum = "+94 ";
+    return false;
   }
 }
 
@@ -679,6 +677,12 @@ function favOrderAdd() {
   displayOrders(user.order);
   calTotal(user.order);
 }
+
+const emptyFormDisplay = document.getElementById("EmptyFormDisplay");
+function showEmptyForm(){
+  emptyFormDisplay.classList.toggle("hidden")
+}
+
 // ///////////////////////Event listeners/////////////////////////////////////////////
 
 window.addEventListener("load", init);
@@ -694,17 +698,19 @@ guestContainer.addEventListener("change", ()=>{
 })
 
 addToOrder_btn.addEventListener("click", () => {
-  console.log("-------------------------hey");
-
-  ticket_type.forEach(element=>{
-    createObject(element);
-  }) 
-  resetForm();
-  resetObjects();
-  updateOrder();
-  dateString = `${selectedDay}/${selectedMonth}/${selectedYear}`;
-  generateUserInfoHtml();
-
+ if (tktQuantityOut === 0){
+   showEmptyForm();
+ }else{
+     console.log("-------------------------hey");
+     ticket_type.forEach((element) => {
+       createObject(element);
+     });
+     resetForm();
+     resetObjects();
+     updateOrder();
+     dateString = `${selectedDay}/${selectedMonth}/${selectedYear}`;
+     generateUserInfoHtml();
+ }
 });
 
 durationselected.addEventListener("click", dynamicDisplayToDuration)

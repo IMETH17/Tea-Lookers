@@ -89,7 +89,7 @@
             <ul class="days"></ul>
           </div>
           </div>
-          <small class="form-text text-danger" id="calendarHelp"></small>
+          <small class="form-text" id="calendarHelp"></small>
         </div>
 
        <!-- Guest details -->
@@ -262,14 +262,18 @@
           <p><span id="duration_display">3 hours</span></p>
           <p>Total Cost</p>
           <p><span id="cost_display">0.00</span></p>
-          <button type="submit" id="addToOrder_btn"  class=" main_btns" onclick="showCart()">Add to Order</button>
+<div>
+            <button type="submit" id="addToOrder_btn"  class=" main_btns" onclick="showCart()">Add to Order</button>
+</div>
         </div>
       </div>
     </form>
 </div>
 <div id="favorites" class="hidden">
   <div>
-    <span class="display-6">Favorties</span><button class="btn-close" aria-label="Close" onclick="showFav()"></button>
+<div class="favorites-div">
+      <span class="display-6">Favorties</span><button class="btn-close" aria-label="Close" onclick="showFav()"></button>
+</div>
     <div id="fav-html">
       <p>Your favorites are empty!</p>
     </div>
@@ -332,6 +336,7 @@
     <!-- <p class="col">Total number of tickets :<span id="displayTotalCost"> </span></p>
     <p class="col"> Total order :<span id="displayTotalTickets"> </span></p> -->
   </div>
+  <span>NOTE: Infants are allowed walk in free, tickets will not be displayed for children under 4 years.</span>
   <button type="submit" id="placeOrder_btn" class="btn btn-success my-4 px-3">Place Order</button>
   <button class="btn btn-success" onclick="generateFavHtml()">Add to Favorties</button>
 </div>
@@ -354,6 +359,27 @@
     <span class="display-1 bg-danger tick rounded-circle justify-content-center"><i class="bi bi-x"></i></span>
   </div>
   </div>
+
+  <div id="failureDisplay" class="failureMsg position-fixed container hidden "> 
+  <div class="row justify-content-end">
+    <button class="btn-close" aria-label="Close" onclick="showFailure()"></button>
+  </div>
+  <div class="row">
+    <p class="h4">The cart is empty!</p>
+    <span class="display-1 bg-danger tick rounded-circle justify-content-center"><i class="bi bi-x"></i></span>
+  </div>
+  </div>
+
+    <div id="EmptyFormDisplay" class="failureMsg position-fixed container hidden "> 
+  <div class="row justify-content-end">
+    <button class="btn-close" aria-label="Close" onclick="showEmptyForm()"></button>
+  </div>
+  <div class="row">
+    <p class="h4">The forms are incomplete!</p>
+    <span class="display-1 bg-danger tick rounded-circle justify-content-center"><i class="bi bi-x"></i></span>
+  </div>
+  </div>
+
   <!-- calendar js -->
   <script src="calendar.js"></script>
   <!-- main.js -->

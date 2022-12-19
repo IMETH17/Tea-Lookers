@@ -1,6 +1,11 @@
+body{
+    background-color:rgb(208, 223, 210) ;
+}
+
 .body{
   /* width: 55vw; */
   margin: auto auto;
+
 }
 
 .nav-item{
@@ -35,6 +40,23 @@ option{
   padding: 4px;
 }
 
+.failMsg{
+        top: 50%;
+        left: 50%;
+        width: 30em;
+        height: 18em;
+        margin-top: -9em;
+        margin-left: -15em;
+        border: 1px solid #666;
+        background-color:rgb(255, 255, 255);
+        border-radius: 10px;
+        border: none;
+        box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+        position: fixed;
+        padding: 5px 20px 0 20px;
+        z-index: 70;
+}
+
 #successDonation{
           top: 50%;
         left: 50%;
@@ -43,7 +65,7 @@ option{
         margin-top: -9em;
         margin-left: -15em;
         border: 1px solid #666;
-        background-color:rgb(208, 223, 210);
+        background-color:rgb(255, 255, 255);
         border-radius: 10px;
         border: none;
         box-shadow: 0 15px 40px rgba(0,0,0,0.12);

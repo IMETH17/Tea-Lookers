@@ -82,14 +82,29 @@ const createCalendar =()=> {
         selectedYear = selectedDate.getFullYear();
         selectedMonth = selectedDate.getMonth()+1;
         selectedDay = selectedDate.getDate();
-          if (selectedDay > currentDay){
-            console.log(`${selectedDay}/${selectedMonth}/${selectedYear}`);
-            calendarHelp.innerText =`You have selected ${selectedDay}/${selectedMonth}/${selectedYear}`;
-          }else{
-            calendarHelp.innerText = `Please select a valid date, Booking available from ${currentDay}/${currentMonth}/${currentYear}`;
-          }
+        dateSelectedCheck();
+
       });
     });
+}
+
+function dateSelectedCheck(){
+            if (selectedDay > currentDay) {
+              console.log(`${selectedDay}/${selectedMonth}/${selectedYear}`);
+              calendarHelp.innerText = `You have selected ${selectedDay}/${selectedMonth}/${selectedYear}`;
+              if (calendarHelp.classList.contains("text-danger")) {
+                calendarHelp.classList.remove("text-danger");
+              }
+              calendarHelp.classList.add("text-success");
+              return true;
+            } else {
+              calendarHelp.innerText = `Please select a valid date, Booking available from ${currentDay}/${currentMonth}/${currentYear}`;
+              if (calendarHelp.classList.contains("text-success")) {
+                calendarHelp.classList.remove("text-success");
+              }
+              calendarHelp.classList.add("text-danger");
+              return false;
+            }
 }
 
 createCalendar();
