@@ -1,0 +1,22 @@
+.quantity-btn{
+  border-radius: 10px;
+  width: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.quantity_field{
+  width: 30px;
+  text-align: center;
+  border-radius: 2px;
+  margin: 5px 0 5px 0;
+  padding: 3px;
+  gap: 10px;
+  background-color: rgb(217, 252, 233);
+  border: none;
+}
+
+.ticket-containerInner{
+  display: flex;
+
+}

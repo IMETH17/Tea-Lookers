@@ -1,0 +1,141 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.body{
+  display: flex;
+  width: 50vw;
+  margin: auto auto;
+  margin-bottom: 20px;
+}
+
+/* .form_container{
+  width: 550px;
+} */
+
+.fields{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+  padding: 5px 20px 5px 20px;
+  border-radius: 5px;
+}
+
+.item{
+  display: flex;
+  justify-content: space-between;
+}
+
+#current_order{
+  margin-top: 20px;
+  
+}
+
+.border-rounded{
+  border-radius: 5px;
+}
+
+.main_btns{
+  padding: 3px;
+  border: none;
+  border-radius: 5px;
+}
+
+.hidden{
+  display: none;
+}
+
+.cart{
+  background-color: rgb(208, 223, 210);
+}
+
+.header-ticket{
+  padding:  10px 10px 0 10px;
+  display: flex;
+  justify-content: space-between;
+
+}
+
+#durationSelect{
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+}
+
+.successMsg{
+        top: 50%;
+        left: 50%;
+        width: 30em;
+        height: 18em;
+        margin-top: -9em;
+        margin-left: -15em;
+        border: 1px solid #666;
+        background-color:rgb(208, 223, 210);
+        border-radius: 10px;
+        border: none;
+        box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+        position: fixed;
+        padding: 5px 20px 0 20px;
+        z-index: 70;
+}
+
+.failureMsg{
+        top: 50%;
+        left: 50%;
+        width: 30em;
+        height: 18em;
+        margin-top: -9em;
+        margin-left: -15em;
+        border: 1px solid #666;
+        background-color:rgb(208, 223, 210);
+        border-radius: 10px;
+        border: none;
+        box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+        position: fixed;
+        padding: 5px 20px 0 20px;
+        z-index: 80;
+}
+
+/* 
+#addToOrder_btn{
+  margin-top: 10px;
+} */
+
+.display_cart{
+        top: 20%;
+        left: 41.7%;
+        width: 50em;
+        height: 100vh;
+        margin-top: -9em;
+        margin-left: -15em;
+        border: 1px solid #666;
+        background-color:rgb(208, 223, 210);
+        border-radius: 10px;
+        border: none;
+        box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+        position: fixed;
+        padding: 5px 20px 0 20px;
+        z-index: 60;
+}
+
+#favorites{
+  background-color:  rgb(208, 223, 210);
+  right: 0;
+  top: 7vh;
+  position: fixed;
+  width: 50vh;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+  z-index: 89;
+}
+
+
+.tick{
+  width: 100px;
+  margin: auto auto; 
+  margin-top: 5vh; 
+
+}

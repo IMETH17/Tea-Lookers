@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+ <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href=
+"https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" />
+ 
+    <!-- Bootstrap Font Icon CSS -->
+    <link rel="stylesheet" href=
+"https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="ticket.css">
+    <!-- calendar css -->
+    <link rel="stylesheet" href="calendar.css"> 
+    <!-- upDown css -->
+    <link rel="stylesheet" href="upDown.css">
+</head>
+<body>
+<div class="header-ticket bg-dark">
+  <div><h1 class="text-white display-6">Book your Train Ticket</h1></div>
+  <div>
+    <button class="btn btn-success" onclick="showLoyalty()">Check Loyalty Points &nbsp;<i class="bi bi-award"></i></button>
+    <button class="btn btn-success" onclick="showCart()"><i class="bi bi-cart"></i></button>
+    <button class="btn btn-success" onclick="showFav()"><i class="bi bi-star-fill"></i></button>
+  </div>
+</div>
+<div class=" bg-dark text-white py-5 hidden" id ="loyaltyModal">
+  <div class="h4">Loyalty points earned from current order : <span id="loyalty-display" class="h4">0&nbsp;</span>Points</div>
+</div>
+  <div class="body">
+<div class="container-fluid">
+  <div class="ticket_table">
+    <table class="table">
+      <thead>
+        <th> Duration</th>
+        <th> 3 hours</th>
+        <th> Half day</th>
+        <th> Full day</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Local Rate (LKR)</td>
+          <td> - </td>
+          <td> 350.00 </td>
+          <td> 600.00 </td>
+        </tr>
+        <tr>
+          <td>Foreigner Rate (LKR)</td>
+          <td> - </td>
+          <td> 450.00 </td>
+          <td> 800.00 </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+    <form action="" id="theForm">
+
+      <!-- Select date -->
+
+      <div class="select_date fields bg-success">
+        <h5 class="fw-light text-white">Select date</h5>
+        <i class="bi bi-chevron-down text-white" id="chevron_date" ></i>
+      </div>
+
+      <div class="chevron_date hidden">
+      <div class="calendar-container center ">
+            <header>
+            <p class="current_date"></p>
+            <div class="prev-next_icons">
+              <span id="prev"><i class="bi bi-chevron-left"></i></span>
+              <span id="next"><i class="bi bi-chevron-right"></i></span>
+            </div>
+          </header>
+          <div class="calendar-body">
+            <ul class="weeks">
+              <li>Sun</li>
+              <li>Mon</li>
+              <li>Tue</li>
+              <li>Wed</li>
+              <li>Thu</li>
+              <li>Fri</li>
+              <li>Sat</li>
+            </ul>
+            <ul class="days"></ul>
+          </div>
+          </div>
+          <small class="form-text text-danger" id="calendarHelp"></small>
+        </div>
+
+       <!-- Guest details -->
+
+      <div class="guest_details fields bg-success">
+        <h5 class="fw-light text-white">Guest details</h5>
+        <i class="bi bi-chevron-down text-white" id="chevron_guestDetails"></i>
+      </div>
+
+      <div class="guest-container chevron_guestDetails hidden">
+        <div class="div-guestName">
+        <label for="guest-name" >Name as mentioned in ID</label>
+        <input type="text"  id="guestName" class="form-control" placeholder="Enter name" required> 
+        <small id="nameHelp" class="form-text">We'll never share your personal details with anyone else.</small>
+        </div>
+        <div class="guest-email">
+          <label for="guestEmail">Enter email</label>
+          <input type="email"  id="guestEmail" class="form-control email-input" placeholder="name@example.com" required>
+          <small id="emailHelp" class="form-text"></small>
+        </div>
+        <div class="guest-confirmEmail">
+          <label for="guestConfirmEmail">Confirm email</label>
+          <input type="email"  id="guestConfirmEmail" class="form-control email-input" placeholder="name@example.com" required>
+          <small id="emailConfirmHelp" class="form-text "></small>
+        </div>
+        <div class="guest-tele">
+          <label for="guestTele">Enter Phone Number</label>
+          <input type="tel" maxlength="10" id="guestTele" class="form-control" placeholder="+94" 
+          required>
+          <small id="teleHelp" class="form-text"></small>
+        </div>
+      </div>
+        
+      <!-- Ticket details -->
+
+      <div class="ticket_type fields bg-success">
+        <h5 class="fw-light text-white">Select Tickets</h5>
+        <i class="bi bi-chevron-down text-white" id="chevron_ticketSelect"></i>
+      </div>
+
+      <div class="ticket-container chevron_ticketSelect hidden">
+        <table class="table">
+          <thead>
+            <th>Ticket Type</th>
+            <th>Price</th>
+            <th>Quantity</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Local - Adult</td>
+              <td>1,200.00</td>
+              <td>
+                 <div>
+                  <button id="up_btn" onclick="upDownAll('adultSl','up',10)" class="quantity-btn">+</button>
+                  <input type="text" id="quantity_adultSl" value="0" class="quantity_field">
+                  <button id="down_btn" onclick="upDownAll('adultSl','down',0)" class="quantity-btn">-</button>
+                 </div>
+              </td>
+            </tr>
+            <tr>
+              <td>Local - Child</td>
+              <td>700.00</td>
+              <td>
+                <div>
+                  <button id="up_btn" onclick="upDownAll('childSl','up',10)" class="quantity-btn">+</button>
+                  <input type="text" id="quantity_childSl" value="0" class="quantity_field">
+                  <button id="down_btn" onclick="upDownAll('childSl','down',0)" class="quantity-btn">-</button>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>Foreigner - Adult</td>
+              <td>5,500.00</td>
+              <td>
+                <div>
+                  <button id="up_btn" onclick="upDownAll('adultForeign','up',10)" class="quantity-btn">+</button>
+                  <input type="text" id="quantity_adultForeign" value="0" class="quantity_field">
+                  <button id="down_btn" onclick="upDownAll('adultForeign','down',0)" class="quantity-btn">-</button>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div>
+                  Foreigner - Child
+                </div>
+                <div>
+                  <small class="form-text text-muted">Under 13 Years </small>
+                </div>
+              </td>
+              <td>2,700.00</td>
+              <td>
+                <div>
+                  <button id="up_btn" onclick="upDownAll('childForeign','up',10)" class="quantity-btn">+</button>
+                  <input type="text" id="quantity_childForeign" value="0" class="quantity_field">
+                  <button id="down_btn" onclick="upDownAll('childForeign','down',0)" class="quantity-btn">-</button>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+              <div>
+                Infant 
+              </div>
+              <div>
+                <small class="form-text text-muted">Under 4 years</small></td>
+              </div>
+              <td>00.00</td>
+              <td>
+                <div>
+                  <button id="up_btn" onclick="upDownAll('infant','up',10)" class="quantity-btn">+</button>
+                  <input type="text" id="quantity_infant" value="0" class="quantity_field">
+                  <button id="down_btn" onclick="upDownAll('infant','down',0)" class="quantity-btn">-</button>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Select Duration -->
+
+      <div class="select_duration fields bg-success">
+        <h5 class="fw-light text-white">Select Duration</h5>
+        <select name="" id="durationSelect">
+          <option value="3Hour">3 Hour</option>
+          <option value="halfDay">Half Day</option>
+          <option value="fullDay">Full Day</option>
+        </select>
+      </div>
+
+      <div id="current_order ">
+        <h5 class="fw-light">Current Order</h5>
+        <table class="table ">
+          <thead>
+            <th>Ticket type</th>
+            <th>Price</th>
+            <th>Quantity</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Local - Adult</td>
+              <td> <span id="localAdult_spanPrice" class="currentOrder_displayPrice">0.00</span></td>
+              <td><span id="localAdult_spanQuantity" class="currentOrder_displayQuantity">0</span></td>
+            </tr>
+            <tr>
+              <td>Local - Child</td>
+              <td> <span id="localChild_spanPrice" class="currentOrder_displayPrice">0.00</span></td>
+              <td><span id="localChild_spanQuantity" class="currentOrder_displayQuantity">0</span></td>
+            </tr>
+            <tr>
+              <td>Foreigner - Adult</td>
+              <td> <span id="foreignerAdult_spanPrice" class="currentOrder_displayPrice">0.00</span></td>
+              <td><span id="foreignerAdult_spanQuantity" class="currentOrder_displayQuantity">0</span></td>
+            </tr>
+            <tr>
+              <td>Foreigner - Child</td>
+              <td> <span id="foreignerChild_spanPrice" class="currentOrder_displayPrice">0.00</span></td>
+              <td><span id="foreignerChild_spanQuantity" class="currentOrder_displayQuantity">0</span></td>
+            </tr>
+            <tr>
+              <td>Infant </td>
+              <td> <span>0.00</span></td>
+              <td><span id="infant_spanQuantity" class="currentOrder_displayQuantity">0</span></td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="display_duration fields bg-dark text-white mx-1 px-2 py-2">
+          <p>Duration</p>
+          <p><span id="duration_display">3 hours</span></p>
+          <p>Total Cost</p>
+          <p><span id="cost_display">0.00</span></p>
+          <button type="submit" id="addToOrder_btn"  class=" main_btns" onclick="showCart()">Add to Order</button>
+        </div>
+      </div>
+    </form>
+</div>
+<div id="favorites" class="hidden">
+  <div>
+    <span class="display-6">Favorties</span><button class="btn-close" aria-label="Close" onclick="showFav()"></button>
+    <div id="fav-html">
+      <p>Your favorites are empty!</p>
+    </div>
+
+  </div>
+</div>
+<div class="display_cart container-fluid cart hidden">
+  <div class="cart">
+    <div class="place_order">
+      <h5 class="fw-light display-6">Your Cart</h5>
+      <button class="btn-close" aria-label="Close" onclick="showCart()"></button>
+    </div>
+    <div id="user-info">
+    </div>
+    <table class="table">
+      <thead>
+        <th>No.</th>
+        <th>Ticket Type</th>
+        <th>Quantity</th>
+        <th>Total Cost</th>
+        <th>Duration</th>
+        <th></th>
+      </thead>
+      <tbody id="display_cart">
+      </tbody>
+    </table>
+    <!-- <div class="item px-3 py-2 border-rounded bg-success text-white">
+      <div><p>${ticket_type}</p></div>
+      <div><p>Quantity : ${quantity}</p></div>
+      <div><p>Price : ${ticket_corresTotalPrice}</p></div>
+      <div><p>Duration : ${corresDuration}</p></div>
+      <div><button class="remove_btn main_btns">remove</button></div>
+    </div>
+    <div class="item px-3 py-2 border-rounded">
+      <div><p>${ticket_type}</p></div>
+      <div><p>Quantity : ${quantity}</p></div>
+      <div><p>Price : ${ticket_corresTotalPrice}</p></div>
+      <div><p>Duration : ${corresDuration}</p></div>
+      <div><button class="remove_btn main_btns">remove</button></div>
+    </div>
+    <div class="item px-3 py-2 border-rounded bg-success text-white">
+      <div><p>${ticket_type}</p></div>
+      <div><p>Quantity : ${quantity}</p></div>
+      <div><p>Price : ${ticket_corresTotalPrice}</p></div>
+      <div><p>Duration : ${corresDuration}</p></div>
+      <div><button class="remove_btn main_btns">remove</button></div>
+    </div> -->
+  </div>
+  <div>
+    <table class="table">
+      <tbody>
+        <tr>
+          <p class="col"> <td> Total number of tickets </td><td> &nbsp;:&nbsp;<span id="displayTotalCost"> </span> </td></p>
+        </tr>
+        <tr>
+          <p class="col"> <td>Total order</td> <td> &nbsp;:&nbsp;<span id="displayTotalTickets"></td></span></p>
+        </tr>
+      </tbody>
+    </table>
+    <!-- <p class="col">Total number of tickets :<span id="displayTotalCost"> </span></p>
+    <p class="col"> Total order :<span id="displayTotalTickets"> </span></p> -->
+  </div>
+  <button type="submit" id="placeOrder_btn" class="btn btn-success my-4 px-3">Place Order</button>
+  <button class="btn btn-success" onclick="generateFavHtml()">Add to Favorties</button>
+</div>
+<div id="success-display" class="successMsg position-fixed container hidden"> 
+  <div class="row justify-content-end">
+    <button class="btn-close" aria-label="Close" onclick="showSuccess()"></button>
+  </div>
+  <div class="row">
+    <p class="h4">Thank you for your reservation!</p>
+    <span class="display-1 bg-success tick rounded-circle justify-content-center"><i class="bi bi-check"></i></span>
+  </div>
+</div>
+
+  <div id="failureDisplay" class="failureMsg position-fixed container hidden "> 
+  <div class="row justify-content-end">
+    <button class="btn-close" aria-label="Close" onclick="showFailure()"></button>
+  </div>
+  <div class="row">
+    <p class="h4">The cart is empty!</p>
+    <span class="display-1 bg-danger tick rounded-circle justify-content-center"><i class="bi bi-x"></i></span>
+  </div>
+  </div>
+  <!-- calendar js -->
+  <script src="calendar.js"></script>
+  <!-- main.js -->
+  <script src="ticket.js"></script>
+  <!-- upDown.js -->
+  <script src="upDown.js"></script>
+</body>
+</html>

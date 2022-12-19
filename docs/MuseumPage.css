@@ -101,7 +101,34 @@
 #museum-map{
   grid-area: 4/2/5/8;
   width: 90%;
+  margin-top: 10px;
   margin-bottom: 2rem;
+}
+
+.ticket-section{
+  background-color: rgb(59, 167, 129);
+  padding: 10px;
+  border-radius: 10px;
+
+  color:white
+}
+
+.btn-ticket{
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+}
+.btn-ticket:hover{
+  background-color: rgb(155, 192, 169);
+}
+
+#flex-div{
+  background-color:  rgb(155, 192, 169);
+  padding: 5px;
+  border-radius: 5px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-around;
 }
 
 /* Responsive design-------------------------------------------------------------- */
@@ -172,3 +199,4 @@
   }
 
 }
+
