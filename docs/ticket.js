@@ -357,11 +357,14 @@ function calTotal(ordersArray){
   console.log(ordersArray);
   ordersArray.forEach(order=>{
     if (order !==null){
-          totalCostOut += order.orderObject.totalPrice;
-          totalTktsOut += order.orderObject.quant;
+      totalCostOut += order.orderObject.totalPrice;
+      totalTktsOut += order.orderObject.quant;
     }
     // updateCart(order);
   })
+  if (totalTktsOut === 0){
+    showEmptyForm();
+  }
   displayTotalCost.innerText = `${totalCostOut}.00`;
   displayTotalTickets.innerText = `${totalTktsOut}`;
   totalTktsOut = 0;
@@ -698,9 +701,9 @@ guestContainer.addEventListener("change", ()=>{
 })
 
 addToOrder_btn.addEventListener("click", () => {
- if (tktQuantityOut === 0){
-   showEmptyForm();
- }else{
+//  if (totalTktsOut === 0){
+//    showEmptyForm();
+//  }else{
      console.log("-------------------------hey");
      ticket_type.forEach((element) => {
        createObject(element);
@@ -710,7 +713,7 @@ addToOrder_btn.addEventListener("click", () => {
      updateOrder();
      dateString = `${selectedDay}/${selectedMonth}/${selectedYear}`;
      generateUserInfoHtml();
- }
+//  }
 });
 
 durationselected.addEventListener("click", dynamicDisplayToDuration)

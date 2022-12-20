@@ -161,11 +161,19 @@ function showFailDonation(){
   failDisplay.classList.toggle("hidden");
 }
 
+function resetForms(){
+  cvv.value              = "";
+  cardName.value         = "";
+  expireMM.value         = "";
+  expireYY.value         = ""; 
+}
+
 pay_btn.addEventListener("click",(e)=>{
   e.preventDefault();
   console.log(342);
   if ( check1===false || check2===false || check3===false || check4===false){
     showSuccessDonation();
+    resetForm();
   }else{
     showFailDonation();
   }
