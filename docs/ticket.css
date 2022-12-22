@@ -123,7 +123,7 @@
         border-radius: 10px;
         border: none;
         box-shadow: 0 15px 40px rgba(0,0,0,0.12);
-        position: fixed;
+        position: absolute;
         padding: 5px 20px 0 20px;
         z-index: 60;
 }
